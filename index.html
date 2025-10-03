@@ -57,14 +57,14 @@
   </div>
 
   <script>
-    function checkCode() {
-      const input = document.getElementById("code").value.trim().toUpperCase();
-      if (input === "VNX777") {
-        document.getElementById("message").style.display = "block";
-      } else {
-        alert("ACCESS DENIED");
-      }
+  function checkCode() {
+    const input = document.getElementById("code").value.trim().toUpperCase();
+    if (input === "VNX777") {
+      window.location.href = "next.html"; // pindah ke next.html
+    } else {
+      alert("ACCESS DENIED");
     }
-  </script>
+  }
+</script>
 </body>
 </html>
