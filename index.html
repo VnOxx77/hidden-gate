@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Hidden Gate</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff99;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      padding-top: 10%;
+    }
+    .box {
+      border: 2px solid #00ff99;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      color: #ffcc00;
+      font-size: 18px;
+    }
+    input {
+      background: black;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      padding: 5px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    button {
+      background: #00ff99;
+      color: black;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+    button:hover {
+      background: #009966;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>ENTER THE PASSWORD</h2>
+    <input type="text" id="code" placeholder="Type here">
+    <button onclick="checkCode()">Enter</button>
+    <div id="message" class="hidden">
+      <h3>CONGRATULATIONS, SEEKER.</h3>
+      <p>YOU HAVE UNLOCKED THE FIRST GATE.</p>
+      <p>TRUTH LIES IN PERSISTENCE.</p>
+    </div>
+  </div>
+
+  <script>
+    function checkCode() {
+      const input = document.getElementById("code").value.trim().toUpperCase();
+      if (input === "OPENPORTAL") {
+        document.getElementById("message").style.display = "block";
+      } else {
+        alert("ACCESS DENIED");
+      }
+    }
+  </script>
+</body>
+</html>
